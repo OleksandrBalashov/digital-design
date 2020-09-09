@@ -1,0 +1,242 @@
+.service-section {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    padding-top: 40px;
+  }
+  .wrap-first {
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+      padding-top: 50px;
+      padding-bottom: 28px;
+    }
+    .section-title {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 1.17;
+      letter-spacing: 2px;
+
+      color: $blue;
+      margin-bottom: 40px;
+
+      @media screen and (min-width: 1440px) {
+        margin-bottom: 65px;
+      }
+
+      @media screen and (max-width: 1439px) {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 48px;
+        line-height: 1.17;
+      }
+    }
+
+    // @media screen and (min-width: 768px) and (max-width: 1439px) {
+    //   margin-bottom: 27px;
+    // }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
+
+      .section-title::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 8px;
+        background-color: $blue;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+
+    .section-text {
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 1440px) {
+        line-height: 1.1;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 35px;
+        &::after {
+          content: '';
+          display: block;
+          width: 100px;
+          height: 8px;
+          background-color: $blue;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .text {
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      line-height: 1.13;
+      color: $secondary-text-color;
+
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+        line-height: 1.33;
+      }
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.service-section {
+  .container {
+    @media screen and (min-width: 1440px) {
+      display: flex;
+
+      .wrap-first {
+        max-width: 40%;
+        padding-top: 90px;
+        padding-bottom: 135px;
+      }
+
+      .wrap-second {
+        .service-item {
+          flex-basis: 25%;
+        }
+      }
+    }
+  }
+}
+
+.service-section {
+  .services-list {
+    @extend %list;
+
+    .service-item {
+      max-width: 100%;
+
+      padding: 10px;
+      border: 1px solid $border-color;
+
+      @media screen and (min-width: 1440px) {
+        height: 275px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1439px) {
+        height: 340px;
+      }
+
+      @media screen and (max-width: 767px) {
+        height: 310px;
+      }
+    }
+  }
+}
+
+.service-item {
+  .service-link {
+    height: 100%;
+    @extend %link;
+    @extend %centered-flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    transition: 250ms linear;
+
+    &:hover,
+    &:focus {
+      border: 3px solid $blue;
+    }
+
+    &:hover .wrap-icon,
+    &:focus .wrap-icon {
+      transform: translateY(-40px);
+    }
+
+    &:hover .service-text,
+    &:focus .service-text,
+    &:hover b,
+    &:focus b {
+      opacity: 1;
+    }
+
+    .wrap-icon {
+      @extend %centered-flex;
+      flex-direction: column;
+
+      transform: translateY(0);
+      transition: transform 250ms linear;
+
+      img {
+        margin-bottom: 20px;
+      }
+
+      .service-subtitle {
+        max-width: 200px;
+        margin: 0;
+        padding: 0;
+        line-height: 1.19;
+
+        letter-spacing: 2px;
+        color: $primary-text-color;
+      }
+    }
+  }
+}
+
+.service-link {
+  .service-text {
+    max-width: 250px;
+
+    margin: 0;
+    padding: 0;
+    color: $icon-text;
+    text-align: center;
+    opacity: 0;
+
+    margin-bottom: 8px;
+
+    transition: opacity 250ms linear;
+  }
+
+  b {
+    line-height: 1.19;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+
+    color: $blue;
+    opacity: 0;
+
+    transition: opacity 250ms linear;
+
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.wrap-second {
+  .services-list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .service-item {
+        flex-basis: 50%;
+      }
+    }
+  }
+}

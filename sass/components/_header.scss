@@ -1,0 +1,22 @@
+.header {
+  background-color: $blue;
+
+  .logo {
+    @extend %link;
+    display: flex;
+    align-items: center;
+
+    padding: 7px 25px;
+    .button {
+      @extend %button;
+      margin-left: auto;
+
+      width: 40px;
+      height: 40px;
+
+      .icon-button {
+        fill: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $primary-text-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

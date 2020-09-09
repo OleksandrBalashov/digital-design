@@ -1,0 +1,117 @@
+.hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: 1440px) {
+    max-width: 2000px;
+    height: 688px;
+    background-image: url('../images/overlays/overlay.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/overlays/overlay@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    max-width: 1399px;
+    height: 465px;
+    background-image: url('../images/overlays/overlay-table.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/overlays/overlay-table@2x.jpg');
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 767px;
+    height: 193px;
+    background-image: url('../images/overlays/overlay-mob.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/overlays/overlay-mob@2x.jpg');
+    }
+  }
+
+  .title-wrapper {
+    @extend %centered-flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .section-title {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+      line-height: 1;
+      color: $white;
+      text-align: center;
+    }
+
+    .section-text {
+      margin: 0;
+      padding: 0;
+      line-height: 1.1;
+      color: $white;
+      text-align: center;
+    }
+
+    .button {
+      border: 0;
+      margin: 0;
+      padding: 17px 44px;
+      background-color: $blue;
+      cursor: pointer;
+      color: $bg-color;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .title-wrapper {
+      max-width: 900px;
+      height: 668px;
+      .section-title {
+        max-width: 500px;
+        font-size: 96px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+      }
+
+      .section-text {
+        font-size: 24px;
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    .title-wrapper {
+      max-width: 640px;
+      height: 465px;
+      .section-title {
+        max-width: 300px;
+        margin-bottom: 25px;
+
+        font-size: 60px;
+      }
+
+      .section-text {
+        font-size: 18px;
+
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .container {
+      display: none;
+    }
+  }
+}
